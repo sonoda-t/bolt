@@ -1,5 +1,5 @@
 $(function(){
     $("#ham-menu").click(function(){
-        $("#header__btn").toggleClass("show")
+        $("#sp_btn").toggleClass("show")
     });
 });

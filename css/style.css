@@ -10,15 +10,12 @@ body img {
   vertical-align: bottom;
 }
 
-.wrapper {
-  //width: 100%;
-}
-
 .inner {
   margin: 0 auto;
   width: 1200px;
   box-sizing: border-box;
   padding: 0 20px;
+  position: relative;
 }
 
 h1 {
@@ -41,7 +38,7 @@ header {
 
 #ham-menu {
   position: absolute;
-  top: 27px;
+  top: 12px;
   right: 10px;
   display: none;
   box-sizing: border-box;
@@ -50,13 +47,13 @@ header {
   border-radius: 4px;
 }
 
-#ham-menu > div {
+.ham-menu__container {
   position: relative;
   width: 25px;
   height: 14px;
 }
 
-#ham-menu span {
+.ham-menu__border {
   position: absolute;
   left: 0;
   width: 100%;
@@ -65,26 +62,26 @@ header {
   border-radius: 3px;
 }
 
-#ham-menu span:nth-child(1) {
+.ham-menu__border:nth-child(1) {
   top: 0;
 }
 
-#ham-menu span:nth-child(2) {
+.ham-menu__border:nth-child(2) {
   top: 6px;
 }
 
-#ham-menu span:nth-child(3) {
+.ham-menu__border:nth-child(3) {
   top: 12px;
 }
 
-#header__btn {
+.header__btn {
   position: absolute;
   right: 15px;
-  top: 15px;
+  top: 0;
   transition: all 0.3s;
 }
 
-#header__btn > p {
+.header__btn-txt {
   background-color: #74cfae;
   color: #fff;
   display: inline-block;
@@ -92,6 +89,10 @@ header {
   padding: 14px 12px;
   float: right;
   font-size: 12px;
+}
+
+.hidden {
+  display: none;
 }
 
 .mainvisual {
@@ -122,12 +123,12 @@ header {
   float: right;
 }
 
-.content__box__txt > p {
+.content__box__txt-sub {
   margin-top: 35px;
   line-height: 1.5;
 }
 
-.content__box__txt span {
+.new__line {
   display: block;
 }
 
@@ -147,6 +148,11 @@ header {
 .work__pic-box > li {
   margin-left: 100px;
   float: left;
+  opacity: 0.7;
+}
+
+.work__pic-box > li:hover {
+  opacity: 1;
 }
 
 .work__pic-box > li:first-child {
@@ -157,10 +163,6 @@ header {
   line-height: 1.5;
   float: left;
   margin-left: 120px;
-}
-
-.work__txt span {
-  display: block;
 }
 
 .work__btn {
@@ -244,8 +246,6 @@ footer {
   .content__box {
     box-sizing: border-box;
     padding: 0 10%;
-    //width: 90px;
-    //margin: 0 auto;
   }
 
   .content__box > figure {
@@ -253,7 +253,7 @@ footer {
     margin: 0 0 20px;
   }
 
-  .content__box__txt span {
+  .new__line {
     display: inline;
   }
 
@@ -262,7 +262,7 @@ footer {
   }
 
   .work__pic {
-    margin: 40px 50px 80px;
+    margin: 40px auto 80px;
   }
 
   .work__pic-box > li {
@@ -273,10 +273,6 @@ footer {
   .work__txt {
     float: none;
     margin-left: 0;
-  }
-
-  .work__txt span {
-    display: inline;
   }
 
   .work__btn {
@@ -301,27 +297,24 @@ footer {
     font-size: 3em;
   }
 
-  #ham-menu{
+  #ham-menu {
     display: inline-block;
     margin: auto 0;
     vertical-align: middle;
   }
 
-  #header__btn {
+  .header__btn {
     position: static;
     box-sizing: border-box;
     padding: 5px 0 0;
     border: solid 1px #ddd;
+    display: none;
   }
 
-  #header__btn > p {
+  .header__btn-txt {
     text-align: left;
     display: block;
     float: none;
-  }
-
-  .hidden {
-    display: none;
   }
 
   .show {
@@ -333,7 +326,7 @@ footer {
     line-height: 1.2;
   }
 
-  .mainvisual span {
+  .main__new__line {
     display: block;
   }
 
@@ -348,7 +341,7 @@ footer {
   }
 }
 
-.clearfix::before ,
+.clearfix::before,
 .clearfix::after {
   display: block;
   content: '';
